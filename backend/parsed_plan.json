@@ -1,0 +1,302 @@
+[
+  {
+    "day": 1,
+    "title": "Why I Started Coding",
+    "category": "PYTHON & AUTOMATION",
+    "hook": "I didn't fall in love with coding, I grew into it.",
+    "body": "I didn't start out chasing a passion for programming. I started because I wanted to build things and Python\nwas the easiest way in. The first few weeks were slow: syntax errors, confusing tutorials, and a lot of\ncopy-pasting without fully understanding why something worked. What changed things was consistency, not\ntalent. Showing up daily, even for 30 minutes, taught me more than any single course. Over time, Python led\nme into web development, automation, AI, and eventually mobile and IoT projects. None of that felt possible\non day one.",
+    "lesson": "Consistency beats motivation. Small daily effort compounds faster than short bursts of enthusiasm.",
+    "benefit": "This mindset is the foundation behind every project I will share in the next 30 days.",
+    "hashtags": "#Python #DeveloperJourney #LearnToCode #CodeNewbie"
+  },
+  {
+    "day": 2,
+    "title": "The First Python Script That Actually Worked",
+    "category": "PYTHON & AUTOMATION",
+    "hook": "My first useful Python script was ten lines long, and it felt like magic.",
+    "body": "It was nothing impressive: a script that renamed a folder full of files based on a pattern. But it solved a real\nannoyance, and that made the difference. Before that, I was writing code just to finish exercises. This was\nthe first time code did something for me. It used a loop, a function, and basic file handling. That is it. But it\ntaught me that programming is really about solving small, boring problems before it becomes about anything\nadvanced.",
+    "lesson": "You don't need advanced skills to write useful code. You need a real problem to solve.",
+    "benefit": "The same loop-and-function logic later became the core of bigger automation scripts I built.",
+    "hashtags": "#Python #Automation #BeginnerCoder #100DaysOfCode"
+  },
+  {
+    "day": 3,
+    "title": "Git Saved My Project (and My Sanity)",
+    "category": "DEV TOOLS & VCS",
+    "hook": "I lost two days of work before I actually understood why version control matters.",
+    "body": "Early on, I kept multiple folders like project_final, project_final2, project_actually_final. Then one bad edit\nbroke something and I had no way back. That is when I properly learned Git: commits, branches, and writing\nmessages that actually describe what changed. It felt like extra work at first. Now I cannot imagine starting a\nproject without it, whether I am working alone or with a team.",
+    "lesson": "Version control is not optional, even for solo projects. It is a safety net you will eventually need.",
+    "benefit": "Every project since then, from Flutter apps to FastAPI backends, has been tracked in Git from day one.",
+    "hashtags": "#Git #GitHub #SoftwareDevelopment #DeveloperTips"
+  },
+  {
+    "day": 4,
+    "title": "Building My First Real Web Page",
+    "category": "FULL-STACK WEB",
+    "hook": "Before any framework, I built plain HTML, CSS, and JavaScript pages, and I am glad I did.",
+    "body": "It is tempting to jump straight into React or Next.js, but starting with plain HTML, CSS, and JavaScript\nhelped me understand what frameworks are actually doing underneath. I learned the box model, how the\nDOM updates, and why layout bugs happen in the first place. Later, when I started using Tailwind CSS,\nstyling became much faster, but the fundamentals I learned first are still what I rely on when something\nbreaks.",
+    "lesson": "Learn the fundamentals before the framework. Frameworks are shortcuts, not replacements for\nunderstanding.",
+    "benefit": "This foundation made it much easier to debug UI issues later in bigger web applications.",
+    "hashtags": "#WebDevelopment #TailwindCSS #JavaScript #Frontend"
+  },
+  {
+    "day": 5,
+    "title": "Why I Moved to React and Next.js",
+    "category": "FULL-STACK WEB",
+    "hook": "Plain JavaScript got messy fast once my projects grew past a few pages.",
+    "body": "Managing state and repeating UI code across pages became a real headache. Moving to React, and later\nNext.js, gave me reusable components, cleaner structure, and routing that just made sense. It was not about\nfollowing a trend. It was about my projects outgrowing what plain JavaScript could handle cleanly. Next.js in\nparticular helped once I needed things like server-side rendering and simpler routing.",
+    "lesson": "Pick your tools based on what the project actually needs, not what is popular.",
+    "benefit": "React and Next.js now power the dashboards and admin panels in my SaaS-style projects.",
+    "hashtags": "#React #NextJS #WebDevelopment #Frontend"
+  },
+  {
+    "day": 6,
+    "title": "My Backend Journey: From Node.js to FastAPI",
+    "category": "PYTHON & AUTOMATION",
+    "hook": "I started backend development with Node.js, then fell for FastAPI.",
+    "body": "Node.js was a natural next step after JavaScript on the frontend, and it worked well for general APIs. But\nonce I started building AI-related backends, FastAPI made more sense. It is Python-based, so it fits naturally\nwith AI and data libraries, and its automatic request validation and docs save real time. I did not abandon\nNode.js, I just started choosing the right tool for each project.",
+    "lesson": "There is no single best backend. The right choice depends on what the project connects to.",
+    "benefit": "FastAPI now powers most of the AI APIs and backend services I build.",
+    "hashtags": "#FastAPI #NodeJS #BackendDevelopment #Python"
+  },
+  {
+    "day": 7,
+    "title": "Choosing Between MongoDB and Firebase",
+    "category": "BACKEND & APIS",
+    "hook": "I used to think all databases were basically the same. They are not.",
+    "body": "MongoDB gives me more control and flexibility for custom backend systems, especially when the data\nstructure is more complex, like inventory or school records. Firebase, on the other hand, is great when I\nneed quick real-time sync, especially for Flutter mobile apps, without setting up a full backend. Learning\nwhen to use which one saved me a lot of unnecessary backend work.",
+    "lesson": "Choose your database based on the project's needs, not habit.",
+    "benefit": "MongoDB backs my management systems, Firebase backs several of my Flutter apps.",
+    "hashtags": "#MongoDB #Firebase #Database #BackendDevelopment"
+  },
+  {
+    "day": 8,
+    "title": "My First Automation With n8n",
+    "category": "BACKEND & APIS",
+    "hook": "I automated a repetitive task in one afternoon and felt silly for not doing it sooner.",
+    "body": "I had a simple but annoying task: manually copying form submissions into a spreadsheet and sending a\nnotification. With n8n, I built a workflow that did it automatically, connecting a trigger to a couple of actions\nwith no custom backend needed. It was one of those moments where I realized how much time gets wasted\non tasks that do not need a human at all.",
+    "lesson": "Look for repetitive, rule-based tasks first. Those are the easiest and most valuable to automate.",
+    "benefit": "This same workflow-building approach now supports parts of the AI assistant projects I build.",
+    "hashtags": "#Automation #n8n #NoCode #Productivity"
+  },
+  {
+    "day": 9,
+    "title": "Why I Started Learning Flutter",
+    "category": "MOBILE & FLUTTER",
+    "hook": "I wanted one codebase for Android and iOS, so I picked Flutter.",
+    "body": "Maintaining separate native apps was never realistic for me as a solo developer. Flutter, using Dart, let me\nwrite one codebase and ship to both platforms. The learning curve was real, especially understanding\nwidgets and how everything is a widget in Flutter. State management was confusing at first too. But once it\nclicked, building mobile UIs became genuinely enjoyable.",
+    "lesson": "Cross-platform tools can save enormous time for solo developers and small teams.",
+    "benefit": "Flutter became my main tool for building real mobile apps, not just prototypes.",
+    "hashtags": "#Flutter #Dart #MobileAppDevelopment #CrossPlatform"
+  },
+  {
+    "day": 10,
+    "title": "Building My First Real Flutter App",
+    "category": "MOBILE & FLUTTER",
+    "hook": "My first Flutter app crashed more than it worked, and I learned more from that than any",
+    "body": "I built a simple utility app early on, and it kept crashing due to poor state management and layout mistakes I\ndid not fully understand yet. Debugging it, widget by widget, taught me more about Flutter than any course\ndid. I learned how state actually flows through widgets, and why keeping UI logic separate from business\nlogic saves so many headaches later.",
+    "lesson": "Debugging a broken project teaches you more than following a perfect tutorial.",
+    "benefit": "Those early mistakes shaped how I now structure every Flutter app I build.",
+    "hashtags": "#Flutter #MobileDevelopment #Dart #AppDev"
+  },
+  {
+    "day": 11,
+    "title": "UI/UX Is Not Just Making Things Pretty",
+    "category": "AR & INTERACTION",
+    "hook": "I used to think good design meant nice colors. I was wrong.",
+    "body": "Good UI/UX is really about how easily a user can do what they came to do. I learned this the hard way after\nbuilding a screen that looked nice but confused every test user. Now, before touching colors or fonts, I think\nabout user flow: what does someone need to see first, and what should be one tap away. Visual design\ncomes after that, not before.",
+    "lesson": "Usability comes before visual polish. A confusing interface fails no matter how good it looks.",
+    "benefit": "This shift in thinking directly improved the usability of my pharmacy and school management systems.",
+    "hashtags": "#UIUX #UserExperience #ProductDesign #WebDevelopment"
+  },
+  {
+    "day": 12,
+    "title": "Building a Pharmacy and Medical Store Management System",
+    "category": "FULL-STACK WEB",
+    "hook": "A local pharmacy still tracking stock on paper inspired one of my most useful projects.",
+    "body": "I built a management system to handle inventory, sales, and expiry date tracking for a small pharmacy or\nmedical store setup. The goal was simple: reduce manual errors and make it easy to see what is low in\nstock or close to expiry before it becomes a problem. It combines a web interface with a backend and\ndatabase to keep records organized and searchable instead of scattered across notebooks.",
+    "lesson": "The best project ideas usually come from watching a real, everyday problem, not from a tutorial list.",
+    "benefit": "It directly reduces manual stock errors and expiry-related losses for small medical stores.",
+    "hashtags": "#SoftwareDevelopment #FullStackDeveloper #WebApp #SmallBusinessTech"
+  },
+  {
+    "day": 13,
+    "title": "Designing a School Management SaaS",
+    "category": "FULL-STACK WEB",
+    "hook": "Schools still manage attendance and fees on paper more often than people realize.",
+    "body": "This project is built as a SaaS-style system with different roles: admin, teacher, and student, each seeing\nonly what they need. It handles attendance, fee tracking, and basic record keeping in one place instead of\nspreadsheets and paper registers. Designing for multiple user roles was the hardest part, since each role\nneeded a different view of the same data without exposing information they should not see.",
+    "lesson": "Building for multiple user roles means designing permissions and views from day one, not adding them later.",
+    "benefit": "It reduces manual admin work and keeps attendance and fee records in one accessible system.",
+    "hashtags": "#SaaS #WebDevelopment #EdTech #FullStack"
+  },
+  {
+    "day": 14,
+    "title": "Building AI APIs With FastAPI",
+    "category": "BACKEND & APIS",
+    "hook": "Connecting an AI model to a real API taught me things no course covered.",
+    "body": "Calling a model in a notebook is easy. Serving it reliably through an API is a different problem entirely. I\nused FastAPI to wrap AI functionality into clean endpoints, handling request validation, response formatting,\nand basic error handling along the way. Response time and stability mattered just as much as the AI output\nitself, something I had not fully appreciated before building this.",
+    "lesson": "Production AI work is mostly backend engineering. The model is only one part of the system.",
+    "benefit": "This backend pattern now powers the AI assistant and automation projects I build.",
+    "hashtags": "#FastAPI #AI #API #Python"
+  },
+  {
+    "day": 15,
+    "title": "What Basic Cybersecurity Taught Me About My Own Code",
+    "category": "AR & INTERACTION",
+    "hook": "Learning basic cybersecurity made me go back and rewrite parts of my own projects.",
+    "body": "Once I started learning the basics of cybersecurity, like input validation, authentication practices, and\ncommon vulnerabilities, I realized some of my earlier projects had gaps I had not even considered. Things\nlike trusting user input without checking it, or storing data without thinking about who could access it. It\nchanged how I approach every new project, not just security-focused ones.",
+    "lesson": "Security is a mindset you build into every project, not a feature you add at the end.",
+    "benefit": "My APIs and web apps are noticeably more careful about input handling and access control now.",
+    "hashtags": "#CyberSecurity #WebSecurity #SoftwareDevelopment #InfoSec"
+  },
+  {
+    "day": 16,
+    "title": "A Small Cybersecurity Project That Taught Me a Lot",
+    "category": "AR & INTERACTION",
+    "hook": "I built a simple tool to test basic security weaknesses, and it changed how I write code.",
+    "body": "As part of learning cybersecurity basics, I built a small tool to check for common weaknesses, like weak\npassword patterns and simple input handling flaws in a test application. It was a basic, educational project,\nnot a professional security audit. But actually seeing how easily a poorly validated form can be exploited was\nfar more effective than reading about it.",
+    "lesson": "Hands-on security practice teaches lessons that theory alone cannot.",
+    "benefit": "It made me more careful with authentication and input handling in every project since.",
+    "hashtags": "#CyberSecurity #EthicalHacking #SoftwareDevelopment #InfoSec"
+  },
+  {
+    "day": 17,
+    "title": "My First Steps Into Computer Vision",
+    "category": "FULL-STACK WEB",
+    "hook": "The first time OpenCV detected a face on my webcam, I stared at the screen for a full minute.",
+    "body": "Computer vision felt like a completely different world coming from web and app development. Starting with\nOpenCV, I learned how images are just arrays of numbers, and how operations like grayscale conversion,\nedge detection, and basic face detection actually work under the hood. It was less about magic and more\nabout understanding pixels, matrices, and the math behind them, with NumPy doing a lot of the heavy lifting.",
+    "lesson": "Computer vision starts with understanding data, specifically pixels and arrays, not with fancy models.",
+    "benefit": "This foundation made every computer vision project after this one much easier to understand.",
+    "hashtags": "#ComputerVision #OpenCV #Python #AI"
+  },
+  {
+    "day": 18,
+    "title": "Building a Real-Time Object Tracking Project",
+    "category": "COMPUTER VISION",
+    "hook": "I built a project that could track movement in real time using nothing but a webcam.",
+    "body": "Using OpenCV and NumPy together, I built a project that detects and tracks moving objects through a live\ncamera feed. It involved frame differencing, contour detection, and a fair amount of tuning to reduce false\ndetections from lighting changes. NumPy handled the array operations behind the scenes, which made the\nprocessing fast enough to run in real time.",
+    "lesson": "Combining a vision library with proper array processing is what makes real-time computer vision actually\nusable.",
+    "benefit": "This kind of tracking logic applies directly to monitoring and simple automation use cases.",
+    "hashtags": "#ComputerVision #OpenCV #NumPy #Python"
+  },
+  {
+    "day": 19,
+    "title": "Hand Tracking With MediaPipe: My First AR Experiment",
+    "category": "AR & INTERACTION",
+    "hook": "I moved a virtual object on screen using just my hand, no mouse, no keyboard.",
+    "body": "MediaPipe made hand tracking far more approachable than I expected. It gave me hand landmark points in\nreal time, which I used to detect gestures and control an on-screen element. Getting the landmarks was the\neasy part. Turning raw coordinates into smooth, reliable gesture detection took more tuning than I\nanticipated.",
+    "lesson": "Gesture-based and touchless interfaces are more accessible to build today than most people assume.",
+    "benefit": "This experiment became the base for a more complete AR and hand-tracking project.",
+    "hashtags": "#MediaPipe #ComputerVision #AR #Python"
+  },
+  {
+    "day": 20,
+    "title": "Building an AR and Hand-Tracking Project",
+    "category": "COMPUTER VISION",
+    "hook": "I built an interface you control with hand gestures instead of touching anything.",
+    "body": "Combining OpenCV and MediaPipe, I built a project where hand gestures control on-screen actions, like\nselecting, dragging, or triggering an action without touching a mouse or screen. The real challenge was not\ndetecting the hand, it was making the interaction feel smooth and predictable rather than jumpy and\nfrustrating.",
+    "lesson": "Combining computer vision models with a clear practical use case is what turns a demo into a real project.",
+    "benefit": "This kind of touchless control has real applications in interactive kiosks and accessibility tools.",
+    "hashtags": "#ComputerVision #MediaPipe #AR #Innovation"
+  },
+  {
+    "day": 21,
+    "title": "Why I Got Into IoT and ESP32",
+    "category": "AR & INTERACTION",
+    "hook": "I wanted my code to control something in the real world, not just a screen.",
+    "body": "After spending most of my time in software, I wanted to see code affect something physical. The ESP32 was\na natural entry point: cheap, capable of Wi-Fi, and well supported. I started with basic sensor readings and\nsimple outputs, learning how to think about timing, power, and hardware limitations, which is very different\nfrom software-only development.",
+    "lesson": "IoT forces you to think about hardware constraints, not just logic and code.",
+    "benefit": "This opened the door to building real physical automation and monitoring projects.",
+    "hashtags": "#IoT #ESP32 #Embedded #Hardware"
+  },
+  {
+    "day": 22,
+    "title": "Building an ESP32-Based IoT System",
+    "category": "AR & INTERACTION",
+    "hook": "I connected a microcontroller to the internet and controlled a device from my phone.",
+    "body": "Using an ESP32, I built a project that reads sensor data and sends it over Wi-Fi, along with the ability to\ncontrol an output remotely. Getting stable Wi-Fi connectivity and handling reconnections turned out to be\ntrickier than the actual sensor logic. It taught me that reliability matters more than features in IoT projects.",
+    "lesson": "In IoT, a system that reconnects reliably is more valuable than one packed with extra features.",
+    "benefit": "This same pattern applies to home automation and small-scale industrial monitoring setups.",
+    "hashtags": "#ESP32 #IoT #Automation #Embedded"
+  },
+  {
+    "day": 23,
+    "title": "Designing a Web HCI for Industrial Motors",
+    "category": "FULL-STACK WEB",
+    "hook": "An industrial motor doesn't care about your UI, until someone has to operate it every day.",
+    "body": "I worked on a web-based human-computer interface for monitoring and controlling industrial motor\nparameters. Unlike a typical consumer app, the priority here was clarity and reliability over visual flair.\nOperators needed to see critical values at a glance, with minimal chance of misreading a control or a status\nindicator, since a mistake here is not just inconvenient.",
+    "lesson": "Industrial software design prioritizes simplicity, clarity, and reliability far above aesthetics.",
+    "benefit": "It makes day-to-day motor monitoring and control safer and easier for operators.",
+    "hashtags": "#IoT #WebDevelopment #IndustrialAutomation #HCI"
+  },
+  {
+    "day": 24,
+    "title": "What I Learned Connecting Hardware to a Web Dashboard",
+    "category": "FULL-STACK WEB",
+    "hook": "Getting a motor's real sensor data to show up correctly on a web page took longer than",
+    "body": "Bridging ESP32-based hardware with a web dashboard involves more than just sending data. I had to\nhandle inconsistent readings, connection drops, and making sure the frontend did not break when data was\ndelayed or missing. This kind of hardware-to-web integration debugging is a very different skill from typical\nfrontend or backend work.",
+    "lesson": "Hardware-software integration requires patience with unpredictable, real-world data, not just clean code.",
+    "benefit": "This pattern is reusable across different IoT dashboard projects, not just the motor system.",
+    "hashtags": "#IoT #ESP32 #WebDevelopment #Automation"
+  },
+  {
+    "day": 25,
+    "title": "Getting Started With Agentic AI",
+    "category": "AR & INTERACTION",
+    "hook": "I built an AI setup that didn't just answer questions, it took actions.",
+    "body": "Agentic AI is different from a normal chatbot in that the model can use tools, call functions, or trigger actions\nbased on a goal instead of just returning text. I started experimenting with this by giving a model access to a\nsmall set of defined tools it could call when needed. It changed how I think about AI, less like a search\nengine, more like a component in a larger system.",
+    "lesson": "Agentic AI is about giving models the ability to act within limits, not just generate text.",
+    "benefit": "This concept now sits at the core of the AI assistant projects I am building.",
+    "hashtags": "#AgenticAI #AI #Automation #Python"
+  },
+  {
+    "day": 26,
+    "title": "Running Local LLMs With Ollama",
+    "category": "AR & INTERACTION",
+    "hook": "I ran an AI model on my own machine, no API key, no internet required.",
+    "body": "Ollama made it straightforward to download and run open models locally. For certain projects, this matters a\nlot, especially when privacy, offline access, or cost is a concern. It is not a replacement for larger hosted\nmodels in every case, but for many practical tasks, a local model running through Ollama is more than\nenough.",
+    "lesson": "Local LLMs give you more control, privacy, and predictability for the right kind of project.",
+    "benefit": "This makes offline or privacy-sensitive AI assistant features realistic to build.",
+    "hashtags": "#Ollama #LocalLLM #AI #Python"
+  },
+  {
+    "day": 27,
+    "title": "Building an AI Assistant With Automation",
+    "category": "DEV TOOLS & VCS",
+    "hook": "I connected an AI model to my daily workflow using n8n.",
+    "body": "A useful AI assistant is rarely just a chat window. I connected an AI model to an n8n workflow so it could\ntrigger actions based on a request, instead of only replying with text. This combination of AI reasoning and\nautomation logic is what actually makes an assistant useful for repetitive digital tasks, rather than just a\nnovelty chatbot.",
+    "lesson": "A real AI assistant needs automation and tool access, not just a capable language model.",
+    "benefit": "This setup saves real time on repetitive digital tasks I used to do manually.",
+    "hashtags": "#AI #Automation #n8n #AgenticAI"
+  },
+  {
+    "day": 28,
+    "title": "The Biggest Mistakes I Made as a Developer",
+    "category": "AR & INTERACTION",
+    "hook": "I once shipped a project without testing it properly, and it broke in front of someone who",
+    "body": "Looking back, most of my early mistakes were avoidable: skipping proper testing, ignoring version control\ndiscipline, and over-engineering simple features because I wanted to use a new tool. None of these\nmistakes were dramatic on their own, but together they cost real time and, occasionally, real trust. The\nlesson was not to avoid mistakes entirely, but to actually reflect on them instead of repeating the same ones.",
+    "lesson": "Mistakes are the fastest teacher, but only if you take the time to reflect on why they happened.",
+    "benefit": "Recognizing these patterns early has meant fewer repeated mistakes in every project since.",
+    "hashtags": "#DeveloperJourney #LessonsLearned #SoftwareDevelopment #CodingLife"
+  },
+  {
+    "day": 29,
+    "title": "How All These Skills Actually Connect",
+    "category": "FULL-STACK WEB",
+    "hook": "People sometimes ask why I learn so many different things instead of picking one.",
+    "body": "Web development, mobile apps, AI, computer vision, IoT, and cybersecurity might look unrelated on paper,\nbut in practice they overlap constantly. A single project, like an industrial motor dashboard, can involve a\nweb frontend, an API backend, IoT hardware, and basic security practices all at once. Learning broadly\nacross these areas is what lets me build complete systems instead of just isolated pieces.",
+    "lesson": "Broad, connected skills let you build end-to-end systems, not just individual components.",
+    "benefit": "This is exactly what makes solo, full-system projects like the ones shared this month possible.",
+    "hashtags": "#FullStackDeveloper #AI #IoT #DeveloperJourney"
+  },
+  {
+    "day": 30,
+    "title": "What's Next in My Developer Journey",
+    "category": "BACKEND & APIS",
+    "hook": "Thirty days of sharing my work taught me almost as much as building the projects did.",
+    "body": "Writing about these projects forced me to explain decisions I had previously only made instinctively. Going\nforward, I want to go deeper into agentic AI, combine it more with computer vision and IoT projects, and\nkeep building practical systems rather than isolated demos. If any of these topics, from Flutter to FastAPI to\nESP32, are things you are also working on, I would genuinely like to hear about it.",
+    "lesson": "Sharing your work publicly, even imperfectly, speeds up your own learning.",
+    "benefit": "It also opens the door to feedback and collaboration I would not get by building quietly alone.",
+    "hashtags": "#DeveloperJourney #BuildInPublic #AI #SoftwareDevelopment"
+  }
+]

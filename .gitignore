@@ -1,0 +1,51 @@
+﻿# Python Virtual Environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pytest_cache/
+
+# Environment variables & secrets
+backend/.env
+.env
+.env.local
+
+# Databases & local logs
+*.log
+
+# Flutter & Dart
+mobile_app/.dart_tool/
+mobile_app/build/
+mobile_app/.flutter-plugins
+mobile_app/.flutter-plugins-dependencies
+mobile_app/.packages
+mobile_app/.pub-cache/
+mobile_app/.pub/
+
+# Android build outputs & SDK keys
+mobile_app/android/.gradle/
+mobile_app/android/local.properties
+mobile_app/android/app/build/
+*.keystore
+*.jks
+
+# IDE & OS files
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# SQLite databases with live tokens
+*.db
+*.sqlite
+*.sqlite3
+
+# Browser automation profiles
+backend/chrome_automation_profile/
+chrome_automation_profile/

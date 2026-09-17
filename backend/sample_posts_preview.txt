@@ -1,0 +1,57 @@
+TOPIC: Why I Started Coding
+MEDIA: d:\linkedin_Project\backend\generated_media\haroon_post_01.png
+SCHEDULED TIME (UTC): 2026-09-18 04:00:00 (09:00 AM PKT)
+
+CONTENT:
+"I didn't fall in love with coding, I grew into it."
+
+I didn't start out chasing a passion for programming. I started because I wanted to build things and Python was the easiest way in. The first few weeks were slow: syntax errors, confusing tutorials, and a lot of copy-pasting without fully understanding why something worked. What changed things was consistency, not talent. Showing up daily, even for 30 minutes, taught me more than any single course. Over time, Python led me into web development, automation, AI, and eventually mobile and IoT projects. None of that felt possible on day one.
+
+💡 Key Takeaway:
+Consistency beats motivation. Small daily effort compounds faster than short bursts of enthusiasm.
+
+🛠️ In Practice:
+This mindset is the foundation behind every project I will share in my daily engineering work and system builds.
+
+#Python #DeveloperJourney #LearnToCode #CodeNewbie
+
+======================================================================
+
+TOPIC: The First Python Script That Actually Worked
+MEDIA: d:\linkedin_Project\backend\generated_media\haroon_post_02.png
+SCHEDULED TIME (UTC): 2026-09-19 04:00:00 (09:00 AM PKT)
+
+CONTENT:
+"My first useful Python script was ten lines long, and it felt like magic."
+
+It was nothing impressive: a script that renamed a folder full of files based on a pattern. But it solved a real annoyance, and that made the difference. Before that, I was writing code just to finish exercises. This was the first time code did something for me. It used a loop, a function, and basic file handling. That is it. But it taught me that programming is really about solving small, boring problems before it becomes about anything advanced.
+
+💡 Key Takeaway:
+You don't need advanced skills to write useful code. You need a real problem to solve.
+
+🛠️ In Practice:
+The same loop-and-function logic later became the core of bigger automation scripts I built.
+
+#Python #Automation #BeginnerCoder #100DaysOfCode
+
+======================================================================
+
+TOPIC: Git Saved My Project (and My Sanity)
+MEDIA: d:\linkedin_Project\backend\generated_media\haroon_post_03.png
+SCHEDULED TIME (UTC): 2026-09-20 04:00:00 (09:00 AM PKT)
+
+CONTENT:
+"I lost two days of work before I actually understood why version control matters."
+
+Early on, I kept multiple folders like project_final, project_final2, project_actually_final. Then one bad edit broke something and I had no way back. That is when I properly learned Git: commits, branches, and writing messages that actually describe what changed. It felt like extra work at first. Now I cannot imagine starting a project without it, whether I am working alone or with a team.
+
+💡 Key Takeaway:
+Version control is not optional, even for solo projects. It is a safety net you will eventually need.
+
+🛠️ In Practice:
+Every project since then, from Flutter apps to FastAPI backends, has been tracked in Git from day one.
+
+#Git #GitHub #SoftwareDevelopment #DeveloperTips
+
+======================================================================
+
