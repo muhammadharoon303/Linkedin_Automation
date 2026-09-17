@@ -1,0 +1,57 @@
+﻿name: 24/7 Autonomous LinkedIn Cloud Publisher
+
+on:
+  schedule:
+    # Monday at 08:30 UTC (01:30 PM PKT / inside 1–2 PM slot)
+    - cron: '30 8 * * 1'
+    # Tuesday at 11:00 UTC (04:00 PM PKT / inside 3–5 PM slot)
+    - cron: '0 11 * * 2'
+    # Wednesday at 11:00 UTC (04:00 PM PKT / exact 4 PM star slot ⭐)
+    - cron: '0 11 * * 3'
+    # Thursday at 11:00 UTC (04:00 PM PKT / inside 3–5 PM slot)
+    - cron: '0 11 * * 4'
+    # Friday at 10:30 UTC (03:30 PM PKT / inside 3–4 PM slot)
+    - cron: '30 10 * * 5'
+  workflow_dispatch:
+    inputs:
+      day:
+        description: 'Post Number (1-30) to publish immediately (leave blank for next in line)'
+        required: false
+        default: ''
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          pip install httpx
+
+      - name: Run Cloud LinkedIn Publisher
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: |
+          if [ -n "${{ github.event.inputs.day }}" ]; then
+            python backend/cloud_publisher.py --day ${{ github.event.inputs.day }}
+          else
+            python backend/cloud_publisher.py
+          fi
+
+      - name: Commit & Push Updated Publishing State
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add backend/social_state.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: LinkedIn publishing state [skip ci]" && git push)
