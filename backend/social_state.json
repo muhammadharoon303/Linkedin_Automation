@@ -1,6 +1,6 @@
 {
-  "last_published_day": 4,
-  "last_published_at": "2026-09-21 15:16:16 UTC",
+  "last_published_day": 5,
+  "last_published_at": "2026-09-22 15:12:33 UTC",
   "history": [
     {
       "day": 1,
@@ -27,6 +27,13 @@
       "topic": "Building My First Real Web Page",
       "published_at": "2026-09-21 15:16:16 UTC",
       "platform_post_id": "urn:li:share:7507819997788983298",
+      "status": "published"
+    },
+    {
+      "day": 5,
+      "topic": "Why I Moved to React and Next.js",
+      "published_at": "2026-09-22 15:12:33 UTC",
+      "platform_post_id": "urn:li:share:7508181451440496640",
       "status": "published"
     }
   ]
