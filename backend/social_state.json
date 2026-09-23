@@ -1,6 +1,6 @@
 {
-  "last_published_day": 5,
-  "last_published_at": "2026-09-22 15:12:33 UTC",
+  "last_published_day": 6,
+  "last_published_at": "2026-09-23 15:17:47 UTC",
   "history": [
     {
       "day": 1,
@@ -34,6 +34,13 @@
       "topic": "Why I Moved to React and Next.js",
       "published_at": "2026-09-22 15:12:33 UTC",
       "platform_post_id": "urn:li:share:7508181451440496640",
+      "status": "published"
+    },
+    {
+      "day": 6,
+      "topic": "My Backend Journey: From Node.js to FastAPI",
+      "published_at": "2026-09-23 15:17:47 UTC",
+      "platform_post_id": "urn:li:share:7508545156124573696",
       "status": "published"
     }
   ]
