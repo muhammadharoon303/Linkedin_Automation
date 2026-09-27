@@ -3,6 +3,7 @@ import sys
 import json
 import argparse
 import httpx
+import time
 from datetime import datetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -63,7 +64,50 @@ def upload_image(token: str, author_urn: str, image_path: str) -> str:
         print(f"Image uploaded successfully! Asset URN: {asset_urn}")
         return asset_urn
 
-def publish_ugc_post(token: str, author_urn: str, content: str, asset_urn: str, topic: str) -> str:
+def upload_video(token: str, author_urn: str, video_path: str) -> str:
+    print(f"Uploading animated video to LinkedIn: {video_path}")
+    reg_url = "https://api.linkedin.com/v2/assets?action=registerUpload"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "X-Restli-Protocol-Version": "2.0.0",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "registerUploadRequest": {
+            "recipes": ["urn:li:digitalmediaRecipe:feedshare-video"],
+            "owner": author_urn,
+            "supportedUploadMechanism": ["SYNCHRONOUS_UPLOAD"]
+        }
+    }
+    with httpx.Client(timeout=45.0) as client:
+        resp = client.post(reg_url, headers=headers, json=payload)
+        if resp.status_code not in [200, 201]:
+            raise RuntimeError(f"LinkedIn video registerUpload failed ({resp.status_code}): {resp.text}")
+
+        data = resp.json().get("value", {})
+        asset_urn = data.get("asset")
+        upload_url = data.get("uploadMechanism", {}).get(
+            "com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest", {}
+        ).get("uploadUrl")
+
+        if not asset_urn or not upload_url:
+            raise RuntimeError(f"Missing video asset or uploadUrl: {resp.text}")
+
+        with open(video_path, "rb") as f:
+            video_bytes = f.read()
+
+        put_headers = {
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "video/mp4"
+        }
+        put_resp = client.put(upload_url, headers=put_headers, content=video_bytes)
+        if put_resp.status_code not in [200, 201]:
+            raise RuntimeError(f"Binary video upload failed ({put_resp.status_code}): {put_resp.text}")
+
+        print(f"Video uploaded successfully! Asset URN: {asset_urn}")
+        return asset_urn
+
+def publish_ugc_post(token: str, author_urn: str, content: str, asset_urn: str, topic: str, media_category: str = "IMAGE") -> str:
     print("Publishing post via LinkedIn ugcPosts API...")
     url = "https://api.linkedin.com/v2/ugcPosts"
     headers = {
@@ -79,7 +123,7 @@ def publish_ugc_post(token: str, author_urn: str, content: str, asset_urn: str, 
                 "shareCommentary": {
                     "text": content
                 },
-                "shareMediaCategory": "IMAGE" if asset_urn else "NONE"
+                "shareMediaCategory": media_category if asset_urn else "NONE"
             }
         },
         "visibility": {
@@ -173,20 +217,32 @@ def main():
         full_content += f"{hashtags}"
     full_content = full_content.strip()
 
+    video_dir = os.path.join(BASE_DIR, "generated_videos")
+    video_path = os.path.join(video_dir, f"haroon_post_{target_day:02d}_animated.mp4")
     image_path = os.path.join(MEDIA_DIR, f"haroon_post_{target_day:02d}.png")
     if not os.path.exists(image_path):
-        print(f"Warning: Specific image {image_path} not found. Searching fallback...")
         image_path = os.path.join(MEDIA_DIR, "haroon_post_01.png")
 
     print(f"\n==========================================")
     print(f"Executing Cloud Publish for Post #{target_day}: {topic}")
     print(f"==========================================")
 
-    # 1. Upload 3D Image
-    asset_urn = upload_image(token, author_urn, image_path)
+    asset_urn = None
+    media_category = "NONE"
+
+    # Prioritize animated video
+    if os.path.exists(video_path):
+        print(f"Found animated video: {video_path}")
+        asset_urn = upload_video(token, author_urn, video_path)
+        media_category = "VIDEO"
+        time.sleep(3)
+    elif os.path.exists(image_path):
+        print(f"Found visual image: {image_path}")
+        asset_urn = upload_image(token, author_urn, image_path)
+        media_category = "IMAGE"
 
     # 2. Publish post
-    post_id = publish_ugc_post(token, author_urn, full_content, asset_urn, topic)
+    post_id = publish_ugc_post(token, author_urn, full_content, asset_urn, topic, media_category=media_category)
 
     # 3. Update state
     now_utc = datetime.utcnow().strftime("%Y-%m-%d %H:%M:%S UTC")

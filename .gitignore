@@ -1,4 +1,4 @@
-﻿# Python Virtual Environments
+# Python Virtual Environments
 .venv/
 venv/
 env/
@@ -49,3 +49,8 @@ Thumbs.db
 # Browser automation profiles
 backend/chrome_automation_profile/
 chrome_automation_profile/
+
+# Temporary video render files
+*_temp.mp4
+*_audio.mp3
+backend/generated_videos/sample_audio.mp3

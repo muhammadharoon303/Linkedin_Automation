@@ -121,10 +121,21 @@ class LinkedInAdapter(BasePlatformAdapter):
                     error=f"Could not resolve LinkedIn member identity: {e}"
                 )
 
-        # Upload image if available
-        image_urn = None
-        if hasattr(post, 'media_path') and post.media_path and os.path.exists(post.media_path):
-            image_urn = await self.upload_image(account.access_token, author_urn, post.media_path)
+        # Upload video or image if available
+        media_urn = None
+        media_category = "NONE"
+        media_path = getattr(post, 'media_path', None)
+
+        if media_path and os.path.exists(media_path):
+            if media_path.lower().endswith(('.mp4', '.mov', '.avi')):
+                media_urn = await self.upload_video(account.access_token, author_urn, media_path)
+                if media_urn:
+                    media_category = "VIDEO"
+                    await asyncio.sleep(3)
+            else:
+                media_urn = await self.upload_image(account.access_token, author_urn, media_path)
+                if media_urn:
+                    media_category = "IMAGE"
 
         url = "https://api.linkedin.com/v2/ugcPosts"
         headers = {
@@ -141,7 +152,7 @@ class LinkedInAdapter(BasePlatformAdapter):
                     "shareCommentary": {
                         "text": post.content
                     },
-                    "shareMediaCategory": "IMAGE" if image_urn else "NONE"
+                    "shareMediaCategory": media_category
                 }
             },
             "visibility": {
@@ -149,22 +160,22 @@ class LinkedInAdapter(BasePlatformAdapter):
             }
         }
 
-        if image_urn:
+        if media_urn:
             ugc_payload["specificContent"]["com.linkedin.ugc.ShareContent"]["media"] = [
                 {
                     "status": "READY",
                     "description": {
-                        "text": post.topic[:100] if post.topic else "Post Image"
+                        "text": post.topic[:100] if post.topic else "Architecture Video"
                     },
-                    "media": image_urn,
+                    "media": media_urn,
                     "title": {
-                        "text": post.topic[:100] if post.topic else "Post Image"
+                        "text": post.topic[:100] if post.topic else "Architecture Video"
                     }
                 }
             ]
 
         try:
-            async with httpx.AsyncClient(timeout=20.0) as client:
+            async with httpx.AsyncClient(timeout=25.0) as client:
                 resp = await client.post(url, headers=headers, json=ugc_payload)
                 if resp.status_code in [200, 201]:
                     data = resp.json()
@@ -172,7 +183,7 @@ class LinkedInAdapter(BasePlatformAdapter):
                     return PublishResult(
                         success=True,
                         platform_post_id=post_urn,
-                        details="Published with image via official LinkedIn ugcPosts REST API" if image_urn else "Published via official LinkedIn ugcPosts REST API"
+                        details=f"Published with animated {media_category.lower()} via official LinkedIn ugcPosts REST API" if media_urn else "Published via official LinkedIn ugcPosts REST API"
                     )
                 else:
                     error_msg = f"LinkedIn API returned {resp.status_code}: {resp.text}"
@@ -241,4 +252,60 @@ class LinkedInAdapter(BasePlatformAdapter):
             logger.error(f"Failed to upload image to LinkedIn: {e}")
             return None
 
+    @staticmethod
+    async def upload_video(access_token: str, author_urn: str, video_path: str) -> Optional[str]:
+        """
+        Uploads an animated MP4 video to LinkedIn:
+        1. Register upload (POST https://api.linkedin.com/v2/assets?action=registerUpload with feedshare-video recipe)
+        2. PUT raw binary video payload to uploadUrl
+        """
+        try:
+            reg_url = "https://api.linkedin.com/v2/assets?action=registerUpload"
+            headers = {
+                "Authorization": f"Bearer {access_token}",
+                "X-Restli-Protocol-Version": "2.0.0",
+                "Content-Type": "application/json"
+            }
+            reg_payload = {
+                "registerUploadRequest": {
+                    "recipes": ["urn:li:digitalmediaRecipe:feedshare-video"],
+                    "owner": author_urn,
+                    "supportedUploadMechanism": ["SYNCHRONOUS_UPLOAD"]
+                }
+            }
+            async with httpx.AsyncClient(timeout=40.0) as client:
+                resp = await client.post(reg_url, headers=headers, json=reg_payload)
+                if resp.status_code not in [200, 201]:
+                    logger.error(f"LinkedIn video registerUpload failed ({resp.status_code}): {resp.text}")
+                    return None
+
+                data = resp.json().get("value", {})
+                asset_urn = data.get("asset")
+                upload_url = data.get("uploadMechanism", {}).get(
+                    "com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest", {}
+                ).get("uploadUrl")
+
+                if not asset_urn or not upload_url:
+                    logger.error(f"LinkedIn video asset or uploadUrl missing: {resp.text}")
+                    return None
+
+                with open(video_path, "rb") as f:
+                    video_bytes = f.read()
+
+                put_headers = {
+                    "Authorization": f"Bearer {access_token}",
+                    "Content-Type": "video/mp4"
+                }
+                put_resp = await client.put(upload_url, headers=put_headers, content=video_bytes)
+                if put_resp.status_code in [200, 201]:
+                    logger.info(f"Video successfully uploaded to LinkedIn: {asset_urn}")
+                    return asset_urn
+                else:
+                    logger.error(f"LinkedIn binary video PUT failed ({put_resp.status_code}): {put_resp.text}")
+                    return None
+        except Exception as e:
+            logger.error(f"Failed to upload video to LinkedIn: {e}")
+            return None
+
 linkedin_adapter = LinkedInAdapter()
+
