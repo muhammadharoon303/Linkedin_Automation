@@ -6,6 +6,12 @@ import httpx
 import time
 from datetime import datetime
 
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
+    try:
+        sys.stdout.reconfigure(encoding="utf-8")
+    except Exception:
+        pass
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 STATE_FILE = os.path.join(BASE_DIR, "social_state.json")
 PLAN_FILE = os.path.join(BASE_DIR, "parsed_plan.json")
