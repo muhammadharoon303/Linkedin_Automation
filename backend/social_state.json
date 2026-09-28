@@ -1,6 +1,6 @@
 {
-  "last_published_day": 9,
-  "last_published_at": "2026-09-27 18:38:55 UTC",
+  "last_published_day": 10,
+  "last_published_at": "2026-09-28 16:55:57 UTC",
   "history": [
     {
       "day": 1,
@@ -62,6 +62,13 @@
       "topic": "Why I Started Learning Flutter",
       "published_at": "2026-09-27 18:38:55 UTC",
       "platform_post_id": "urn:li:ugcPost:7510045323994685441",
+      "status": "published"
+    },
+    {
+      "day": 10,
+      "topic": "Building My First Real Flutter App",
+      "published_at": "2026-09-28 16:55:57 UTC",
+      "platform_post_id": "urn:li:ugcPost:7510381799068438528",
       "status": "published"
     }
   ]
