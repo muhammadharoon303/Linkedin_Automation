@@ -1,6 +1,6 @@
 {
-  "last_published_day": 10,
-  "last_published_at": "2026-09-28 16:55:57 UTC",
+  "last_published_day": 11,
+  "last_published_at": "2026-09-29 16:40:25 UTC",
   "history": [
     {
       "day": 1,
@@ -69,6 +69,13 @@
       "topic": "Building My First Real Flutter App",
       "published_at": "2026-09-28 16:55:57 UTC",
       "platform_post_id": "urn:li:ugcPost:7510381799068438528",
+      "status": "published"
+    },
+    {
+      "day": 11,
+      "topic": "UI/UX Is Not Just Making Things Pretty",
+      "published_at": "2026-09-29 16:40:25 UTC",
+      "platform_post_id": "urn:li:ugcPost:7510740274030116864",
       "status": "published"
     }
   ]
