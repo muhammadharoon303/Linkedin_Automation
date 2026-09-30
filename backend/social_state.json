@@ -1,6 +1,6 @@
 {
-  "last_published_day": 11,
-  "last_published_at": "2026-09-29 16:40:25 UTC",
+  "last_published_day": 12,
+  "last_published_at": "2026-09-30 16:39:56 UTC",
   "history": [
     {
       "day": 1,
@@ -76,6 +76,13 @@
       "topic": "UI/UX Is Not Just Making Things Pretty",
       "published_at": "2026-09-29 16:40:25 UTC",
       "platform_post_id": "urn:li:ugcPost:7510740274030116864",
+      "status": "published"
+    },
+    {
+      "day": 12,
+      "topic": "Building a Pharmacy and Medical Store Management System",
+      "published_at": "2026-09-30 16:39:56 UTC",
+      "platform_post_id": "urn:li:ugcPost:7511102544027226112",
       "status": "published"
     }
   ]
