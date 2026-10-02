@@ -1,6 +1,6 @@
 {
-  "last_published_day": 13,
-  "last_published_at": "2026-10-01 17:10:12 UTC",
+  "last_published_day": 14,
+  "last_published_at": "2026-10-02 16:19:15 UTC",
   "history": [
     {
       "day": 1,
@@ -90,6 +90,13 @@
       "topic": "Designing a School Management SaaS",
       "published_at": "2026-10-01 17:10:12 UTC",
       "platform_post_id": "urn:li:ugcPost:7511472546928623616",
+      "status": "published"
+    },
+    {
+      "day": 14,
+      "topic": "Building AI APIs With FastAPI",
+      "published_at": "2026-10-02 16:19:15 UTC",
+      "platform_post_id": "urn:li:ugcPost:7511822113205301248",
       "status": "published"
     }
   ]
