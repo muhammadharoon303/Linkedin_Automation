@@ -1,6 +1,6 @@
 {
-  "last_published_day": 14,
-  "last_published_at": "2026-10-02 16:19:15 UTC",
+  "last_published_day": 15,
+  "last_published_at": "2026-10-05 11:11:59 UTC",
   "history": [
     {
       "day": 1,
@@ -97,6 +97,13 @@
       "topic": "Building AI APIs With FastAPI",
       "published_at": "2026-10-02 16:19:15 UTC",
       "platform_post_id": "urn:li:ugcPost:7511822113205301248",
+      "status": "published"
+    },
+    {
+      "day": 15,
+      "topic": "What Basic Cybersecurity Taught Me About My Own Code",
+      "published_at": "2026-10-05 11:11:59 UTC",
+      "platform_post_id": "urn:li:ugcPost:7512831953897906176",
       "status": "published"
     }
   ]

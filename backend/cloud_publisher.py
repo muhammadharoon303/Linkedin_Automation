@@ -223,20 +223,23 @@ def main():
     clean_benefit = clean_benefit.replace("Day ", "Part ")
 
     # 4. Community CTA and Strategic Target Hashtags by niche
-    cat_upper = category.upper()
-    if "FLUTTER" in cat_upper or "MOBILE" in cat_upper:
+    text_signature = f"{category} {topic} {hashtags}".upper()
+    if "SECURITY" in text_signature or "CYBER" in text_signature or "INFOSEC" in text_signature:
+        cta = "How often do you audit your own production codebases for security edge cases? Let's discuss below 👇"
+        targeted_tags = "#CyberSecurity #WebSecurity #AppSec #SoftwareDevelopment #DevSecOps #BackendEngineering #TechLeadership"
+    elif "FLUTTER" in text_signature or "MOBILE" in text_signature:
         cta = "How do you handle state isolation and UI rebuilds in your production apps? Let's discuss below 👇"
         targeted_tags = "#FlutterDev #MobileArchitecture #CleanArchitecture #Dart #FullStack #SoftwareEngineering #TechLeadership"
-    elif "BACKEND" in cat_upper or "API" in cat_upper:
+    elif "BACKEND" in text_signature or "FASTAPI" in text_signature or "API" in text_signature:
         cta = "What is your go-to architecture for high-throughput async microservices? Share your stack below 👇"
         targeted_tags = "#FastAPI #BackendEngineering #Python #SystemDesign #Microservices #SoftwareArchitecture #CloudNative"
-    elif "AI" in cat_upper or "AGENT" in cat_upper:
+    elif "AGENT" in text_signature or "OLLAMA" in text_signature or "LLM" in text_signature:
         cta = "Are you deploying local quantized LLMs or cloud APIs for your agentic workflows? Drop your thoughts below 👇"
         targeted_tags = "#AgenticAI #LocalLLM #Ollama #GenerativeAI #AIArchitecture #Python #TechInnovation"
-    elif "VISION" in cat_upper or "AR" in cat_upper:
+    elif "VISION" in text_signature or "MEDIAPIPE" in text_signature or "TRACKING" in text_signature:
         cta = "What is the biggest latency hurdle you've faced with real-time CV pipelines? Let's talk below 👇"
         targeted_tags = "#ComputerVision #MediaPipe #OpenCV #AugmentedReality #AI #EdgeComputing #DeepLearning"
-    elif "IOT" in cat_upper or "ESP32" in cat_upper:
+    elif "IOT" in text_signature or "ESP32" in text_signature or "MOTOR" in text_signature or "HCI" in text_signature:
         cta = "How do you architect telemetry pipelines between microcontrollers and web interfaces? Let's discuss 👇"
         targeted_tags = "#IoT #ESP32 #HardwareToCloud #EmbeddedSystems #WebSockets #Industry40 #TechMakers"
     else:
