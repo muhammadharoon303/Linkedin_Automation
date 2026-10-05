@@ -1,6 +1,6 @@
 {
-  "last_published_day": 15,
-  "last_published_at": "2026-10-05 11:11:59 UTC",
+  "last_published_day": 16,
+  "last_published_at": "2026-10-05 17:18:35 UTC",
   "history": [
     {
       "day": 1,
@@ -104,6 +104,13 @@
       "topic": "What Basic Cybersecurity Taught Me About My Own Code",
       "published_at": "2026-10-05 11:11:59 UTC",
       "platform_post_id": "urn:li:ugcPost:7512831953897906176",
+      "status": "published"
+    },
+    {
+      "day": 16,
+      "topic": "A Small Cybersecurity Project That Taught Me a Lot",
+      "published_at": "2026-10-05 17:18:35 UTC",
+      "platform_post_id": "urn:li:ugcPost:7512924207987597312",
       "status": "published"
     }
   ]
