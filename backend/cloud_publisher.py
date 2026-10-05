@@ -197,16 +197,19 @@ def main():
         sys.exit(1)
 
     topic = post_data["title"].strip()
+    category = post_data.get("category", "ENGINEERING").strip()
     hook = post_data.get("hook", "").strip()
     body = post_data.get("body", "").strip()
     lesson = post_data.get("lesson", "").strip()
     benefit = post_data.get("benefit", "").strip()
     hashtags = post_data.get("hashtags", "").strip()
 
-    # Clean formatting (No Day X mentions, clean paragraphs)
-    clean_benefit = benefit.replace("in the next 30 days", "in my daily engineering work and system builds")
-    clean_benefit = clean_benefit.replace("I will share in the next 30 days", "I build into production systems")
+    # 1. High-Impact Scroll-Stopping Hook
+    clean_hook = hook.rstrip(".")
+    if not clean_hook.endswith("?"):
+        clean_hook = f"{clean_hook}."
 
+    # 2. Body formatted into crisp readable paragraphs
     body_paragraphs = []
     for para in body.split("\n\n"):
         para_clean = " ".join(para.split())
@@ -214,14 +217,46 @@ def main():
             body_paragraphs.append(para_clean)
     formatted_body = "\n\n".join(body_paragraphs)
 
-    full_content = f'"{hook}"\n\n{formatted_body}\n\n'
-    if lesson:
-        full_content += f"💡 Key Takeaway:\n{lesson}\n\n"
-    if clean_benefit:
-        full_content += f"🛠️ In Practice:\n{clean_benefit}\n\n"
-    if hashtags:
-        full_content += f"{hashtags}"
-    full_content = full_content.strip()
+    # 3. What I Do in Production Architecture
+    clean_benefit = benefit.replace("in the next 30 days", "in scalable enterprise systems")
+    clean_benefit = clean_benefit.replace("I will share in the next 30 days", "I build into production systems")
+    clean_benefit = clean_benefit.replace("Day ", "Part ")
+
+    # 4. Community CTA and Strategic Target Hashtags by niche
+    cat_upper = category.upper()
+    if "FLUTTER" in cat_upper or "MOBILE" in cat_upper:
+        cta = "How do you handle state isolation and UI rebuilds in your production apps? Let's discuss below 👇"
+        targeted_tags = "#FlutterDev #MobileArchitecture #CleanArchitecture #Dart #FullStack #SoftwareEngineering #TechLeadership"
+    elif "BACKEND" in cat_upper or "API" in cat_upper:
+        cta = "What is your go-to architecture for high-throughput async microservices? Share your stack below 👇"
+        targeted_tags = "#FastAPI #BackendEngineering #Python #SystemDesign #Microservices #SoftwareArchitecture #CloudNative"
+    elif "AI" in cat_upper or "AGENT" in cat_upper:
+        cta = "Are you deploying local quantized LLMs or cloud APIs for your agentic workflows? Drop your thoughts below 👇"
+        targeted_tags = "#AgenticAI #LocalLLM #Ollama #GenerativeAI #AIArchitecture #Python #TechInnovation"
+    elif "VISION" in cat_upper or "AR" in cat_upper:
+        cta = "What is the biggest latency hurdle you've faced with real-time CV pipelines? Let's talk below 👇"
+        targeted_tags = "#ComputerVision #MediaPipe #OpenCV #AugmentedReality #AI #EdgeComputing #DeepLearning"
+    elif "IOT" in cat_upper or "ESP32" in cat_upper:
+        cta = "How do you architect telemetry pipelines between microcontrollers and web interfaces? Let's discuss 👇"
+        targeted_tags = "#IoT #ESP32 #HardwareToCloud #EmbeddedSystems #WebSockets #Industry40 #TechMakers"
+    else:
+        cta = "What is the single biggest architectural lesson that changed how you build software? Drop your thoughts below 👇"
+        targeted_tags = "#SoftwareEngineering #SystemArchitecture #FullStack #TechLeadership #Programming #DeveloperCommunity"
+
+    all_tags = list(dict.fromkeys(targeted_tags.split() + hashtags.split()))
+    final_hashtags = " ".join(all_tags[:7])
+
+    full_content = (
+        f"{clean_hook}\n\n"
+        f"{formatted_body}\n\n"
+        f"⚙️ What I Do & How I Architect It:\n"
+        f"{clean_benefit}\n\n"
+        f"💡 Senior Engineering Takeaway:\n"
+        f"{lesson}\n\n"
+        f"💬 {cta}\n\n"
+        f"🎯 Specialization: Full-Stack Architecture • High-Throughput APIs • AI Systems\n\n"
+        f"{final_hashtags}"
+    ).strip()
 
     video_dir = os.path.join(BASE_DIR, "generated_videos")
     video_path = os.path.join(video_dir, f"haroon_post_{target_day:02d}_animated.mp4")

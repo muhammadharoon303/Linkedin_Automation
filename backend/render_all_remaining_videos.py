@@ -3,9 +3,10 @@ import sys
 import json
 import asyncio
 import sqlite3
+import argparse
 
 # Ensure utf-8 stdout
-if sys.stdout.encoding.lower() != "utf-8":
+if sys.stdout.encoding and sys.stdout.encoding.lower() != "utf-8":
     try:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
@@ -21,7 +22,7 @@ MEDIA_DIR = os.path.join(BASE_DIR, "generated_media")
 VIDEO_DIR = os.path.join(BASE_DIR, "generated_videos")
 DB_PATH = os.path.join(BASE_DIR, "social_ai.db")
 
-async def render_all():
+async def render_all(from_day=1, specific_day=None, force=False):
     os.makedirs(VIDEO_DIR, exist_ok=True)
     with open(PLAN_FILE, "r", encoding="utf-8") as f:
         posts = json.load(f)
@@ -31,9 +32,14 @@ async def render_all():
 
     for post in posts:
         day = post["day"]
+        if specific_day and day != specific_day:
+            continue
+        if day < from_day:
+            continue
+
         video_path = os.path.join(VIDEO_DIR, f"haroon_post_{day:02d}_animated.mp4")
         
-        if os.path.exists(video_path):
+        if os.path.exists(video_path) and not force:
             print(f"[SKIP] Post #{day} already rendered: {video_path}")
         else:
             bg_path = os.path.join(MEDIA_DIR, f"haroon_post_{day:02d}.png")
@@ -68,7 +74,13 @@ async def render_all():
             conn.commit()
 
     conn.close()
-    print("\nAll videos rendered and database updated successfully!")
+    print("\nAll target videos rendered and database updated successfully!")
 
 if __name__ == "__main__":
-    asyncio.run(render_all())
+    parser = argparse.ArgumentParser(description="Render animated videos")
+    parser.add_argument("--day", type=int, default=None, help="Specific day to render")
+    parser.add_argument("--from-day", type=int, default=1, help="Start from day number")
+    parser.add_argument("--force", action="store_true", help="Force overwrite existing videos")
+    args = parser.parse_args()
+
+    asyncio.run(render_all(from_day=args.from_day, specific_day=args.day, force=args.force))

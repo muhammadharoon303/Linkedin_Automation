@@ -93,7 +93,7 @@
     "day": 10,
     "title": "Building My First Real Flutter App",
     "category": "MOBILE & FLUTTER",
-    "hook": "My first Flutter app crashed more than it worked, and I learned more from that than any",
+    "hook": "My first Flutter app crashed more than it worked, and debugging that state spaghetti taught me more than any tutorial ever could.",
     "body": "I built a simple utility app early on, and it kept crashing due to poor state management and layout mistakes I\ndid not fully understand yet. Debugging it, widget by widget, taught me more about Flutter than any course\ndid. I learned how state actually flows through widgets, and why keeping UI logic separate from business\nlogic saves so many headaches later.",
     "lesson": "Debugging a broken project teaches you more than following a perfect tutorial.",
     "benefit": "Those early mistakes shaped how I now structure every Flutter app I build.",
