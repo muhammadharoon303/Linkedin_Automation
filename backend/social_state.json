@@ -1,6 +1,6 @@
 {
-  "last_published_day": 16,
-  "last_published_at": "2026-10-05 17:18:35 UTC",
+  "last_published_day": 17,
+  "last_published_at": "2026-10-06 16:58:27 UTC",
   "history": [
     {
       "day": 1,
@@ -111,6 +111,13 @@
       "topic": "A Small Cybersecurity Project That Taught Me a Lot",
       "published_at": "2026-10-05 17:18:35 UTC",
       "platform_post_id": "urn:li:ugcPost:7512924207987597312",
+      "status": "published"
+    },
+    {
+      "day": 17,
+      "topic": "My First Steps Into Computer Vision",
+      "published_at": "2026-10-06 16:58:27 UTC",
+      "platform_post_id": "urn:li:ugcPost:7513281529792569344",
       "status": "published"
     }
   ]
