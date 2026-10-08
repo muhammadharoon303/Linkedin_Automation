@@ -1,6 +1,6 @@
 {
-  "last_published_day": 18,
-  "last_published_at": "2026-10-07 17:40:28 UTC",
+  "last_published_day": 19,
+  "last_published_at": "2026-10-08 17:37:44 UTC",
   "history": [
     {
       "day": 1,
@@ -125,6 +125,13 @@
       "topic": "Building a Real-Time Object Tracking Project",
       "published_at": "2026-10-07 17:40:28 UTC",
       "platform_post_id": "urn:li:ugcPost:7513654491850866688",
+      "status": "published"
+    },
+    {
+      "day": 19,
+      "topic": "Hand Tracking With MediaPipe: My First AR Experiment",
+      "published_at": "2026-10-08 17:37:44 UTC",
+      "platform_post_id": "urn:li:ugcPost:7514016194463707137",
       "status": "published"
     }
   ]
