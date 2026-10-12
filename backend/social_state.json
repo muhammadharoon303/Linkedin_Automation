@@ -1,6 +1,6 @@
 {
-  "last_published_day": 20,
-  "last_published_at": "2026-10-09 17:06:33 UTC",
+  "last_published_day": 21,
+  "last_published_at": "2026-10-12 18:07:55 UTC",
   "history": [
     {
       "day": 1,
@@ -139,6 +139,13 @@
       "topic": "Building an AR and Hand-Tracking Project",
       "published_at": "2026-10-09 17:06:33 UTC",
       "platform_post_id": "urn:li:ugcPost:7514370732798201857",
+      "status": "published"
+    },
+    {
+      "day": 21,
+      "topic": "Why I Got Into IoT and ESP32",
+      "published_at": "2026-10-12 18:07:55 UTC",
+      "platform_post_id": "urn:li:ugcPost:7515473339965087744",
       "status": "published"
     }
   ]
