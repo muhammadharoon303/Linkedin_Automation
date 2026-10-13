@@ -1,6 +1,6 @@
 {
-  "last_published_day": 21,
-  "last_published_at": "2026-10-12 18:07:55 UTC",
+  "last_published_day": 22,
+  "last_published_at": "2026-10-13 17:50:29 UTC",
   "history": [
     {
       "day": 1,
@@ -146,6 +146,13 @@
       "topic": "Why I Got Into IoT and ESP32",
       "published_at": "2026-10-12 18:07:55 UTC",
       "platform_post_id": "urn:li:ugcPost:7515473339965087744",
+      "status": "published"
+    },
+    {
+      "day": 22,
+      "topic": "Building an ESP32-Based IoT System",
+      "published_at": "2026-10-13 17:50:29 UTC",
+      "platform_post_id": "urn:li:ugcPost:7515831339770687489",
       "status": "published"
     }
   ]
