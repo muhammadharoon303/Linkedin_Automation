@@ -1,6 +1,6 @@
 {
-  "last_published_day": 22,
-  "last_published_at": "2026-10-13 17:50:29 UTC",
+  "last_published_day": 23,
+  "last_published_at": "2026-10-14 15:42:33 UTC",
   "history": [
     {
       "day": 1,
@@ -153,6 +153,13 @@
       "topic": "Building an ESP32-Based IoT System",
       "published_at": "2026-10-13 17:50:29 UTC",
       "platform_post_id": "urn:li:ugcPost:7515831339770687489",
+      "status": "published"
+    },
+    {
+      "day": 23,
+      "topic": "Designing a Web HCI for Industrial Motors",
+      "published_at": "2026-10-14 15:42:33 UTC",
+      "platform_post_id": "urn:li:ugcPost:7516161532544802816",
       "status": "published"
     }
   ]
