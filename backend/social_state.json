@@ -1,6 +1,6 @@
 {
-  "last_published_day": 23,
-  "last_published_at": "2026-10-14 15:42:33 UTC",
+  "last_published_day": 24,
+  "last_published_at": "2026-10-15 15:22:57 UTC",
   "history": [
     {
       "day": 1,
@@ -160,6 +160,13 @@
       "topic": "Designing a Web HCI for Industrial Motors",
       "published_at": "2026-10-14 15:42:33 UTC",
       "platform_post_id": "urn:li:ugcPost:7516161532544802816",
+      "status": "published"
+    },
+    {
+      "day": 24,
+      "topic": "What I Learned Connecting Hardware to a Web Dashboard",
+      "published_at": "2026-10-15 15:22:57 UTC",
+      "platform_post_id": "urn:li:ugcPost:7516518987187331072",
       "status": "published"
     }
   ]
