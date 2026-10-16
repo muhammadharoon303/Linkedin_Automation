@@ -1,6 +1,6 @@
 {
-  "last_published_day": 24,
-  "last_published_at": "2026-10-15 15:22:57 UTC",
+  "last_published_day": 25,
+  "last_published_at": "2026-10-16 14:56:47 UTC",
   "history": [
     {
       "day": 1,
@@ -167,6 +167,13 @@
       "topic": "What I Learned Connecting Hardware to a Web Dashboard",
       "published_at": "2026-10-15 15:22:57 UTC",
       "platform_post_id": "urn:li:ugcPost:7516518987187331072",
+      "status": "published"
+    },
+    {
+      "day": 25,
+      "topic": "Getting Started With Agentic AI",
+      "published_at": "2026-10-16 14:56:47 UTC",
+      "platform_post_id": "urn:li:ugcPost:7516874791933526016",
       "status": "published"
     }
   ]
