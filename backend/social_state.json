@@ -1,6 +1,6 @@
 {
-  "last_published_day": 27,
-  "last_published_at": "2026-10-20 15:25:02 UTC",
+  "last_published_day": 28,
+  "last_published_at": "2026-10-21 15:50:10 UTC",
   "history": [
     {
       "day": 1,
@@ -188,6 +188,13 @@
       "topic": "Building an AI Assistant With Automation",
       "published_at": "2026-10-20 15:25:02 UTC",
       "platform_post_id": "urn:li:ugcPost:7518331453378785280",
+      "status": "published"
+    },
+    {
+      "day": 28,
+      "topic": "The Biggest Mistakes I Made as a Developer",
+      "published_at": "2026-10-21 15:50:10 UTC",
+      "platform_post_id": "urn:li:ugcPost:7518700164283314178",
       "status": "published"
     }
   ]
