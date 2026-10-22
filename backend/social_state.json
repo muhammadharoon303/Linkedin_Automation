@@ -1,6 +1,6 @@
 {
-  "last_published_day": 28,
-  "last_published_at": "2026-10-21 15:50:10 UTC",
+  "last_published_day": 29,
+  "last_published_at": "2026-10-22 15:42:57 UTC",
   "history": [
     {
       "day": 1,
@@ -195,6 +195,13 @@
       "topic": "The Biggest Mistakes I Made as a Developer",
       "published_at": "2026-10-21 15:50:10 UTC",
       "platform_post_id": "urn:li:ugcPost:7518700164283314178",
+      "status": "published"
+    },
+    {
+      "day": 29,
+      "topic": "How All These Skills Actually Connect",
+      "published_at": "2026-10-22 15:42:57 UTC",
+      "platform_post_id": "urn:li:ugcPost:7519060735390515202",
       "status": "published"
     }
   ]
