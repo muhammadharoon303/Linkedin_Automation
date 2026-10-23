@@ -1,6 +1,6 @@
 {
-  "last_published_day": 29,
-  "last_published_at": "2026-10-22 15:42:57 UTC",
+  "last_published_day": 30,
+  "last_published_at": "2026-10-23 15:17:17 UTC",
   "history": [
     {
       "day": 1,
@@ -202,6 +202,13 @@
       "topic": "How All These Skills Actually Connect",
       "published_at": "2026-10-22 15:42:57 UTC",
       "platform_post_id": "urn:li:ugcPost:7519060735390515202",
+      "status": "published"
+    },
+    {
+      "day": 30,
+      "topic": "What's Next in My Developer Journey",
+      "published_at": "2026-10-23 15:17:17 UTC",
+      "platform_post_id": "urn:li:ugcPost:7519416667286999040",
       "status": "published"
     }
   ]
